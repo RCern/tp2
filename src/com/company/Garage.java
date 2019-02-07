@@ -1,18 +1,19 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class Garage{
 
 
 
-    private ArrayList<Vehicule> list = new ArrayList();
+    private List<Vehicule> list = new ArrayList();
+    private Set<Vehicule> set = new TreeSet<>();
 
     public void add(Vehicule v){
         list.add(v);
     }
+
+    public void addToSet(Vehicule v){set.add(v);}
 
     public void triImmatriculation(){
         Collections.sort(this.list);
@@ -27,5 +28,11 @@ public class Garage{
         return "[" +
                 "list=" + list ;
     }
+    /*
+    @Override
+    public String toString() {
+        return "[" +
+                "set=" + set ;
+    }*/
 
 }

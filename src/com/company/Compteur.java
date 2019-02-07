@@ -3,6 +3,7 @@ package com.company;
 public class Compteur {
     private double totalisateur = 0;
     private double partiel = 0;
+    /* a is MaxPartial*/
     private static final int  a = 1000;
 
     public Compteur(){
@@ -33,7 +34,7 @@ public class Compteur {
         this.partiel += partiel;
         this.totalisateur += totalisateur;
         if(this.partiel == a){
-            this.partiel = 0;
+            this.resetPartiel();
         }
     }
 

@@ -17,8 +17,21 @@ public class Main {
         System.out.println(x.compareTo(y));
 
         Garage g = new Garage();
-        g.add(x);
-        g.add(y);
+        g.addToSet(x);
+        g.addToSet(y);
+        Vehicule  z = new Vehicule(1);
+        z.faireLePlein();
+        Vehicule  a = new Vehicule(1);
+        a.faireLePlein();
+        Vehicule  b = new Vehicule(1);
+        b.faireLePlein();
+        z.rouler(500);
+        g.add(z);
+
+        g.add(a);
+        a.rouler(230);
+        g.add(b);
+        b.rouler(56);
         System.out.println(g);
         g.triCompteur();
         System.out.println(g);

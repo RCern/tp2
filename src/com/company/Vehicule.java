@@ -6,7 +6,7 @@ public  class Vehicule implements Comparable<Vehicule> {
     private int numero_inm;
     private Compteur comp = new Compteur();
     private static int registre = 0;
-    private static double capacite = 50.0;
+    private double capacite = 50.0;
     private double jauge;
     private double consommation;
 
@@ -84,6 +84,7 @@ public  class Vehicule implements Comparable<Vehicule> {
             return kilometres;
         }
         else{
+            this.setJauge(0);
             return 0;
         }
     }
