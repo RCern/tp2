@@ -2,9 +2,9 @@ package com.company;
 
 import java.util.*;
 
-public class Garage2{
+public class Garage2 implements Iterable<Vehicule>{
 
-    private SortedSet<Vehicule> set = new TreeSet<>();
+    private Set<Vehicule> set = new TreeSet<>();
 
     public void add(Vehicule v){
         set.add(v);
@@ -13,17 +13,27 @@ public class Garage2{
     public void addToSet(Vehicule v){set.add(v);}
 
     public void triImmatriculation(){
-        Collections.sort(this.set);
+        Vehicule[] arr =  set.toArray(new Vehicule[set.size()]);
+        Arrays.sort(arr);
+        Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));
+        set = myset;
     }
     public void triCompteur(){
         triCompteurClass tri = new triCompteurClass();
-        Collections.sort(this.set,tri);
+        Vehicule[] arr =  set.toArray(new Vehicule[set.size()]);
+        Arrays.sort(arr,tri);
+        Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));
+        set = myset;
     }
 
     @Override
     public String toString() {
         return "[" +
                 "set=" + set ;
+    }
+    @Override
+    public Iterator<Vehicule> iterator() {
+        return set.iterator();
     }
 
 }

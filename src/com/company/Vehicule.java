@@ -78,13 +78,13 @@ public  class Vehicule implements Comparable<Vehicule> {
 
     public double rouler(double kilometres){
 
-        this.jauge -= this.consommation  * (kilometres/100);
-        if(this.jauge > 0){
+        double warren = this.consommation  * (kilometres/100);
+        if(this.jauge > warren){
+            this.jauge -= warren;
             this.getCompteur().add(kilometres);
             return kilometres;
         }
         else{
-            this.setJauge(0);
             return 0;
         }
     }

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Garage1 implements Iterable<Vehicule> {
 
-    private List<Vehicule> list = new ArrayList();
+    private List<Vehicule> list = new ArrayList<Vehicule>();
 
     public void add(Vehicule v) {
         list.add(v);
