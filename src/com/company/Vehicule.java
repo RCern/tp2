@@ -16,7 +16,7 @@ public  class Vehicule implements Comparable<Vehicule> {
         this.consommation = consommation;
     }
 
-    public int getNumero_inm() {
+    public int getNoImmatriculation() {
         return numero_inm;
     }
 
@@ -64,7 +64,7 @@ public  class Vehicule implements Comparable<Vehicule> {
         return comp;
     }
 
-    public void mettreDeLessence(double essence){
+    public void mettreDeLessence(double essence) throws CapaciteDepasseeException{
         if((this.jauge+essence) < this.capacite)
              this.jauge += essence;
         else{
@@ -76,11 +76,11 @@ public  class Vehicule implements Comparable<Vehicule> {
         this.jauge = this.capacite;
     }
 
-    public double  rouler(double kilometres){
+    public double rouler(double kilometres){
 
         this.jauge -= this.consommation  * (kilometres/100);
         if(this.jauge > 0){
-            this.getCompteur().add(kilometres,kilometres);
+            this.getCompteur().add(kilometres);
             return kilometres;
         }
         else{
@@ -98,6 +98,6 @@ public  class Vehicule implements Comparable<Vehicule> {
 
     @Override
     public int compareTo(Vehicule v) {
-        return (this.getNumero_inm()-v.getNumero_inm());
+        return (this.getNoImmatriculation()-v.getNoImmatriculation());
     }
 }
