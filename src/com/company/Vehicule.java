@@ -1,12 +1,12 @@
 package com.company;
 
-import java.util.Comparator;
 
-public class Vehicule implements Comparable {
+
+public  class Vehicule implements Comparable<Vehicule> {
     private int numero_inm;
     private Compteur comp = new Compteur();
     private static int registre = 0;
-    private double capacite = 50.0;
+    private static double capacite = 50.0;
     private double jauge;
     private double consommation;
 
@@ -95,11 +95,8 @@ public class Vehicule implements Comparable {
                 " jauge=" + jauge + "\n";
     }
 
-
-
     @Override
     public int compareTo(Vehicule v) {
-        int compareveh = v.getNumero_inm();
-        return (this.getNumero_inm()-compareveh);
+        return (this.getNumero_inm()-v.getNumero_inm());
     }
 }

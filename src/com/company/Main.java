@@ -20,5 +20,9 @@ public class Main {
         g.add(x);
         g.add(y);
         System.out.println(g);
+        g.triCompteur();
+        System.out.println(g);
+        g.triImmatriculation();
+        System.out.println(g);
     }
 }

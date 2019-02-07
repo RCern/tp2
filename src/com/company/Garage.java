@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Garage{
 
@@ -12,8 +14,12 @@ public class Garage{
         list.add(v);
     }
 
-    public Garage triImmatriculation(){
-        return list.sort();
+    public void triImmatriculation(){
+        Collections.sort(this.list);
+    }
+    public void triCompteur(){
+        triCompteurClass tri = new triCompteurClass();
+        Collections.sort(this.list,tri);
     }
 
     @Override
