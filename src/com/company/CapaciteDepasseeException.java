@@ -2,10 +2,10 @@ package com.company;
 
 public class CapaciteDepasseeException extends Exception {
 
-    int quantite;
+    double quantite;
 
-    public CapaciteDepasseeException(int quantite) {
-        quantite = quantite;
+    public CapaciteDepasseeException(double quantite) {
+        this.quantite = quantite;
     }
 
     public String getMessage(){
