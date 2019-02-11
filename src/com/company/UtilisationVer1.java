@@ -224,7 +224,7 @@ public class UtilisationVer1 {
      * � un garage CompteurComparable, car un Set est sans doublon par rapport au crit�re de comparaison
      */
 
-    /*
+
     public static void testGarage2Bis() {
         Garage2 garageTemp = new Garage2();
 
@@ -255,7 +255,7 @@ public class UtilisationVer1 {
 
         UtilisationVer1.tri2(garage);
     }
-*/
+
     private static void tri1(Garage1 garage) {
         System.out.println("\n\n##Tri selon le no immatriculation ##");
         garage.triNoImmatriculion();

@@ -4,13 +4,13 @@ import java.util.*;
 
 public class Garage2 implements Iterable<Vehicule>{
 
-    private Set<Vehicule> set = new TreeSet<>();
+    private Set<Vehicule> set;
 
     public Garage2(CompteurComparator CompteurComparator) {
-
+            set = new TreeSet<Vehicule>(CompteurComparator);
     }
     public Garage2(){
-
+            set = new TreeSet<Vehicule>();
     }
 
     public void add(Vehicule v){
@@ -20,17 +20,10 @@ public class Garage2 implements Iterable<Vehicule>{
     public void addToSet(Vehicule v){set.add(v);}
 
     public void triNoImmatriculion(){
-        Vehicule[] arr =  set.toArray(new Vehicule[set.size()]);
-        Arrays.sort(arr);
-        Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));
-        set = myset;
+
     }
     public void triCompteur(){
-        CompteurComparator tri = new CompteurComparator();
-        Vehicule[] arr =  set.toArray(new Vehicule[set.size()]);
-        Arrays.sort(arr,tri);
-        Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));
-        set = myset;
+
     }
     public void faireLePleinAll(){
         for(Vehicule v: set){
