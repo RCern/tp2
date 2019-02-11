@@ -44,17 +44,6 @@ public class Garage2 implements Iterable<Vehicule>{
         }
     }
 
-    public void faireLePleinAll(){
-        for(Vehicule v: set){
-            v.faireLePlein();
-        }
-    }
-
-    public void resetPartielAll(){
-        for(Vehicule v: set){
-            v.getCompteur().resetPartiel();
-        }
-    }
 
     @Override
     public String toString() {
