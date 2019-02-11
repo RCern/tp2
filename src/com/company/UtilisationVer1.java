@@ -17,7 +17,7 @@ public class UtilisationVer1 {
         System.out.println("\n\n######## TESTS DU GARAGE Collection: Set Comparable########");
         UtilisationVer1.testGarage2();
         System.out.println("\n\n######## TESTS DU GARAGE Collection: Set CompteurComparator########");
-        //UtilisationVer1.testGarage2Bis();
+        UtilisationVer1.testGarage2Bis();
 
         System.out.println("\n\n######## TESTS DU GARAGE Collection: Set Mappings ########");
         UtilisationVer1.testMappings2();
@@ -213,7 +213,7 @@ public class UtilisationVer1 {
         }
         System.out.println(garage);
 
-        UtilisationVer1.tri2(garage);
+        //UtilisationVer1.tri2(garage);
     }
 
     /**

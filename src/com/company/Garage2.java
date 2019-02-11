@@ -5,12 +5,15 @@ import java.util.*;
 public class Garage2 implements Iterable<Vehicule>{
 
     private Set<Vehicule> set;
+    CompteurComparator comparator;
 
     public Garage2(CompteurComparator CompteurComparator) {
+        this.comparator = CompteurComparator;
             set = new TreeSet<Vehicule>(CompteurComparator);
     }
     public Garage2(){
             set = new TreeSet<Vehicule>();
+            comparator = new CompteurComparator();
     }
 
     public void add(Vehicule v){
@@ -23,6 +26,9 @@ public class Garage2 implements Iterable<Vehicule>{
 
     }
     public void triCompteur(){
+        Set<Vehicule> newSetVehicule = new TreeSet<>(comparator);
+        newSetVehicule.addAll(set);
+        set = newSetVehicule;
 
     }
     public void faireLePleinAll(){
