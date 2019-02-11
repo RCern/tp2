@@ -43,22 +43,22 @@ public class UtilisationVer1 {
 
         double distanceParcourue = vehicule1.rouler(100);
         System.out.println("Le vehicule " + vehicule1.getNoImmatriculation() + " a parcouru " +
-                ((int)( distanceParcourue* 100.0)) / 100.0 + "kms");
+                ((int) (distanceParcourue * 100.0)) / 100.0 + "kms");
         System.out.println(vehicule1);
 
         distanceParcourue = vehicule1.rouler(300);
         System.out.println("Le vehicule " + vehicule1.getNoImmatriculation() + " a parcouru " +
-                ((int)( distanceParcourue* 100.0)) / 100.0 + "kms");
+                ((int) (distanceParcourue * 100.0)) / 100.0 + "kms");
         System.out.println(vehicule1);
 
         distanceParcourue = vehicule1.rouler(700);
         System.out.println("Le vehicule " + vehicule1.getNoImmatriculation() + " a parcouru " +
-                ((int)( distanceParcourue* 100.0)) / 100.0 + "kms");
+                ((int) (distanceParcourue * 100.0)) / 100.0 + "kms");
         System.out.println(vehicule1);
 
         distanceParcourue = vehicule1.rouler(200);
         System.out.println("Le vehicule " + vehicule1.getNoImmatriculation() + " a parcouru " +
-                ((int)( distanceParcourue* 100.0)) / 100.0 + "kms");
+                ((int) (distanceParcourue * 100.0)) / 100.0 + "kms");
         System.out.println(vehicule1);
 
         vehicule1.rouler(540);
@@ -99,13 +99,13 @@ public class UtilisationVer1 {
         garage.add(new Vehicule(4.5));
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             vehicule.faireLePlein();
             vehicule.rouler(Math.random() * 3000);
         }
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             try {
                 vehicule.mettreDeLessence((int) (Math.random() * 100));
             } catch (CapaciteDepasseeException e) {
@@ -134,13 +134,13 @@ public class UtilisationVer1 {
         garage.add(new Vehicule(4.5));
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             vehicule.faireLePlein();
             vehicule.rouler(Math.random() * 3000);
         }
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             try {
                 vehicule.mettreDeLessence((int) (Math.random() * 100));
             } catch (CapaciteDepasseeException e) {
@@ -168,13 +168,13 @@ public class UtilisationVer1 {
         garage.add(new Vehicule(4.5));
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             vehicule.faireLePlein();
             vehicule.rouler(Math.random() * 1000);
         }
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             try {
                 vehicule.mettreDeLessence((int) (Math.random() * 100));
             } catch (CapaciteDepasseeException e) {
@@ -197,14 +197,14 @@ public class UtilisationVer1 {
         garage.add(new Vehicule(4.5));
         System.out.println(garage);
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             vehicule.faireLePlein();
             vehicule.rouler(Math.random() * 1000);
         }
         System.out.println(garage);
 
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             try {
                 vehicule.mettreDeLessence((int) (Math.random() * 100));
             } catch (CapaciteDepasseeException e) {
@@ -232,17 +232,17 @@ public class UtilisationVer1 {
         garageTemp.add(new Vehicule(5.9));
         garageTemp.add(new Vehicule(4.5));
 
-        Garage2 garage = new Garage2(new CompteurComparator());
+        Garage2 garage = new Garage2(/*new CompteurComparator()*/);
         garage = garageTemp;
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             vehicule.faireLePlein();
             vehicule.rouler(Math.random() * 1000);
         }
         System.out.println(garage);
 
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             try {
                 vehicule.mettreDeLessence((int) (Math.random() * 100));
             } catch (CapaciteDepasseeException e) {
@@ -286,3 +286,4 @@ public class UtilisationVer1 {
         garage.triNoImmatriculion();
         System.out.println(garage);
     }
+}
