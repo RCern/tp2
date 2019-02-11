@@ -15,7 +15,7 @@ public class Garage1 implements Iterable<Vehicule> {
     }
 
     public void triCompteur() {
-        triCompteurClass tri = new triCompteurClass();
+        CompteurComparator tri = new CompteurComparator();
         Collections.sort(this.list, tri);
     }
 

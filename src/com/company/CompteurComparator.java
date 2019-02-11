@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Comparator;
 
-public class triCompteurClass implements Comparator<Vehicule> {
+public class CompteurComparator implements Comparator<Vehicule> {
 
     @Override
     public int compare(Vehicule a,Vehicule b) {

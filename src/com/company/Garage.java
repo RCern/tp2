@@ -19,7 +19,7 @@ public class Garage implements Collection{
         Collections.sort(this.list);
     }
     public void triCompteur(){
-        triCompteurClass tri = new triCompteurClass();
+        CompteurComparator tri = new CompteurComparator();
         Collections.sort(this.list,tri);
     }
 

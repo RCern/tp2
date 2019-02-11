@@ -6,6 +6,13 @@ public class Garage2 implements Iterable<Vehicule>{
 
     private Set<Vehicule> set = new TreeSet<>();
 
+    public Garage2(CompteurComparator CompteurComparator) {
+
+    }
+    public Garage2(){
+
+    }
+
     public void add(Vehicule v){
         set.add(v);
     }
@@ -19,7 +26,7 @@ public class Garage2 implements Iterable<Vehicule>{
         set = myset;
     }
     public void triCompteur(){
-        triCompteurClass tri = new triCompteurClass();
+        CompteurComparator tri = new CompteurComparator();
         Vehicule[] arr =  set.toArray(new Vehicule[set.size()]);
         Arrays.sort(arr,tri);
         Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));

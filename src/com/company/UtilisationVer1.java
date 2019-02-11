@@ -232,7 +232,7 @@ public class UtilisationVer1 {
         garageTemp.add(new Vehicule(5.9));
         garageTemp.add(new Vehicule(4.5));
 
-        Garage2 garage = new Garage2(/*new CompteurComparator()*/);
+        Garage2 garage = new Garage2(new CompteurComparator());
         garage = garageTemp;
 
         for (Vehicule vehicule : garage) {
