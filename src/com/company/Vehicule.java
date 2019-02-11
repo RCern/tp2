@@ -69,7 +69,7 @@ public  class Vehicule implements Comparable<Vehicule> {
         if((this.jauge+essence) < this.capacite)
              this.jauge += essence;
         else{
-            throw new CapaciteDepasseeException();
+            throw new CapaciteDepasseeException((int) essence);
         }
     }
 
