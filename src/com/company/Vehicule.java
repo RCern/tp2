@@ -14,6 +14,7 @@ public  class Vehicule implements Comparable<Vehicule> {
         registre++;
         this.setNumero_inm(registre);
         this.consommation = consommation;
+        this.faireLePlein();
     }
 
     public int getNoImmatriculation() {

@@ -12,7 +12,7 @@ public class Garage2 implements Iterable<Vehicule>{
 
     public void addToSet(Vehicule v){set.add(v);}
 
-    public void triImmatriculation(){
+    public void triNoImmatriculion(){
         Vehicule[] arr =  set.toArray(new Vehicule[set.size()]);
         Arrays.sort(arr);
         Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));
@@ -24,6 +24,18 @@ public class Garage2 implements Iterable<Vehicule>{
         Arrays.sort(arr,tri);
         Set<Vehicule> myset = new TreeSet<Vehicule>(Arrays.asList(arr));
         set = myset;
+    }
+
+    public void faireLePleinAll(){
+        for(Vehicule v: set){
+            v.faireLePlein();
+        }
+    }
+
+    public void resetPartielAll(){
+        for(Vehicule v: set){
+            v.getCompteur().resetPartiel();
+        }
     }
 
     @Override

@@ -10,7 +10,7 @@ public class Garage1 implements Iterable<Vehicule> {
         list.add(v);
     }
 
-    public void triImmatriculation() {
+    public void triNoImmatriculion() {
         Collections.sort(this.list);
     }
 
