@@ -69,7 +69,7 @@ public  class Vehicule implements Comparable<Vehicule> {
         if((this.jauge+essence) < this.capacite)
              this.jauge += essence;
         else{
-            System.out.println("Déjà plein");
+            throw new CapaciteDepasseeException();
         }
     }
 
@@ -79,15 +79,18 @@ public  class Vehicule implements Comparable<Vehicule> {
 
     public double rouler(double kilometres){
 
-        double warren = this.consommation  * (kilometres/100);
-        if(this.jauge > warren){
-            this.jauge -= warren;
+        double conso = this.consommation  * (kilometres/100);
+        if(this.jauge > conso){
+            this.jauge -= conso;
             this.getCompteur().add(kilometres);
-            return kilometres;
         }
         else{
-            return 0;
+            kilometres = this.jauge/this.consommation * 100;
+            this.getCompteur().add(kilometres);
+            this.faireLePlein();
         }
+
+        return kilometres;
     }
 
     @Override

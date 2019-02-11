@@ -33,8 +33,10 @@ public class Compteur {
     public void add(double partiel){
         this.partiel += partiel;
         this.totalisateur += partiel;
-        if(this.partiel == a){
+        if(this.partiel >= a){
+            double depassement = this.partiel%a;
             this.resetPartiel();
+            this.partiel += depassement;
         }
     }
 
