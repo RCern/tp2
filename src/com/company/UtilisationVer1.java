@@ -237,14 +237,14 @@ public class UtilisationVer1 {
         Garage2 garage = new Garage2(new CompteurComparator());
         garage = garageTemp;
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             vehicule.faireLePlein();
             vehicule.rouler(Math.random() * 1000);
         }
         System.out.println(garage);
 
 
-        for(Vehicule vehicule : garage) {
+        for (Vehicule vehicule : garage) {
             try {
                 vehicule.mettreDeLessence((int) (Math.random() * 100));
             } catch (CapaciteDepasseeException e) {
