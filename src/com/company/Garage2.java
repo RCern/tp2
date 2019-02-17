@@ -8,7 +8,7 @@ public class Garage2 implements Iterable<Vehicule>{
     CompteurComparator comparator;
 
     public Garage2(CompteurComparator CompteurComparator) {
-        this.comparator = CompteurComparator;
+            this.comparator = CompteurComparator;
             set = new TreeSet<Vehicule>(CompteurComparator);
     }
     public Garage2(){
@@ -23,7 +23,10 @@ public class Garage2 implements Iterable<Vehicule>{
     public void addToSet(Vehicule v){set.add(v);}
 
     public void triNoImmatriculion(){
-
+        CompteurComparator2 comparator2 = null;
+        Set<Vehicule> newSetVehicule = new TreeSet<>(comparator2);
+        newSetVehicule.addAll(set);
+        set = newSetVehicule;
     }
     public void triCompteur(){
         Set<Vehicule> newSetVehicule = new TreeSet<>(comparator);

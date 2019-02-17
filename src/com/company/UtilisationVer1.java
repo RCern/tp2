@@ -213,7 +213,7 @@ public class UtilisationVer1 {
         }
         System.out.println(garage);
 
-        //UtilisationVer1.tri2(garage);
+        UtilisationVer1.tri2(garage);
     }
 
     /**
